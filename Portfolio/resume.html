@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>My Portfolio</title>
+  <link href="styles/styles.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="scripts/foot.js"></script>
+  <script src="scripts/nav-bar.js"></script>
+  <script src="scripts/app.js" defer></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <nav-bar></nav-bar>
+    </header>
+    <main>
+      <section id="Personal_Information">
+        <h1>My Resume</h1>
+        <h3>{{info.firstName}} {{info.lastName}}</h3>
+        <h5>{{info.city}}, {{info.state}}, {{info.zip}}</h5>
+          <a href="mailto:wjones17@my.westga.edu">{{info.email}}</a><br>
+          <a href="https://www.linkedin.com/in/william-jones-a6a917201"target ="_blank">
+            linkedin.com/in/william-jones-a6a917201</a>
+      </section><br>
+      <div id="collapseAndExpandButtons">
+        <button v-on:click="changeAllTrue">Display All Sections</button>
+        <button v-on:click="changeAllFalse">Hide All Sections</button>
+      </div>
+      <div id="buttons">
+        <section id="Education">
+          <h3 v-on:click="changeEducation">Education:</h3>
+          <p v-if="showEducation"><strong>{{education.name}}</strong>: Fall 2019 - Present.<br>
+            <strong>Classification</strong>: Junior<br>
+            <strong>{{education.year}}</strong><br>
+            <a id="cert" href="https://www.freecodecamp.org/certification/fcc455e0d50-8dbb-4060-83c1-a869ecff264c/responsive-web-design" target ="_blank">Responsive Web Design Certification</a>
+          </p>
+        </section>
+        <section id="Work_Experience">
+          <h3 v-on:click="changeWorkExperience">Work Experience:</h3>
+          <div v-if="showWorkExperience"><strong>Company:</strong>{{workExperience.name}}<br>
+            <strong>Title:</strong>{{workExperience.title}}<br>
+            <strong>Years:</strong>{{workExperience.years}}<br>
+            <strong>Description:</strong><br>
+            <p>
+              <ul>
+              <li>{{workExperience.description.sentence1}}</li>
+              <li>{{workExperience.description.sentence2}}</li>
+              <li>{{workExperience.description.sentence3}}</li>
+              <li>{{workExperience.description.sentence4}}</li>
+            </ul>
+            </p>
+            <strong>Company:</strong>{{workExperience.name2}}<br>
+            <strong>Title:</strong>{{workExperience.title2}}<br>
+            <strong>Years:</strong>{{workExperience.years2}}<br>
+            <strong>Description:</strong><br>
+            <p>
+              <ul>
+              <li>{{workExperience.description2.sentence5}}</li>
+              <li>{{workExperience.description2.sentence6}}</li>
+              <li>{{workExperience.description2.sentence7}}</li>
+              <li>{{workExperience.description2.sentence8}}</li>
+              <li>{{workExperience.description2.sentence9}}</li>
+              <li>{{workExperience.description2.sentence10}}</li>
+            </ul>
+            </p>
+          </div>
+        </section>
+        <section id="TechSummary">
+          <h3 v-on:click="changeTechnology">Technology summary:</h3>
+          <p v-if="showTechnology"> {{techSummary}}</p>
+        </section>
+      </div>
+
+    </main><br>
+    <foot></foot>
+  </div>
+</body>
+
+</html>
