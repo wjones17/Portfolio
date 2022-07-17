@@ -62,6 +62,5 @@ var wrapper = new Vue({
       this.showWorkExperience = false;
       this.showTechnology = false;
     }
-
   }
 });
