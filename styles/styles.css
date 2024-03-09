@@ -22,7 +22,11 @@ main, a{
   border-radius: 2em;
 }
 blockquote{
-  text-align: auto;
+  max-width: 80%; /* Adjust the maximum width as needed */
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #f8f8f8;
 }
 body{
   background-color: rgb(95, 196, 243);
