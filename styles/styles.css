@@ -22,7 +22,7 @@ main, a{
   border-radius: 2em;
 }
 blockquote{
-  text-align: center;
+  text-align: auto;
 }
 body{
   background-color: rgb(95, 196, 243);
