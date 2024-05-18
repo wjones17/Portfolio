@@ -25,14 +25,10 @@
         <a href="https://www.linkedin.com/in/william-jones-a6a917201"target ="_blank">
           linkedin.com/in/william-jones-a6a917201</a>
       </section><br>
-      <div id="collapseAndExpandButtons">
-        <button v-on:click="changeAllTrue">Display All Sections</button>
-        <button v-on:click="changeAllFalse">Hide All Sections</button>
-      </div>
       <div id="buttons">
         <section id="Education">
-          <h3 v-on:click="changeEducation">Education:</h3>
-          <p v-if="showEducation"><strong>{{education.name}}</strong><br>
+          <h3>Education:</h3>
+          <p><strong>{{education.name}}</strong><br>
             <strong>{{education.degree}}</strong><br>
             <strong>{{education.year}}</strong><br>
             <a class="cert" href="https://www.freecodecamp.org/certification/fcc455e0d50-8dbb-4060-83c1-a869ecff264c/responsive-web-design" target ="_blank">Responsive Web Design Certification</a>

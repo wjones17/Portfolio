@@ -21,13 +21,5 @@ var wrapper = new Vue({
     changeTechnology: function () {
       this.showTechnology = !this.showTechnology;
     },
-    changeAllTrue: function () {
-      this.showEducation = true;
-      this.showTechnology = true;
-    },
-    changeAllFalse: function () {
-      this.showEducation = false;
-      this.showTechnology = false;
-    }
   }
 });
