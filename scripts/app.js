@@ -20,6 +20,6 @@ var wrapper = new Vue({
     },
     changeTechnology: function () {
       this.showTechnology = !this.showTechnology;
-    },
+    }
   }
 });

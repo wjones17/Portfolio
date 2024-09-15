@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head id="head">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="William Jones' professional portfolio showcasing skills in programming and web development.">
@@ -30,6 +30,7 @@
           I am self-motivated and dedicated to continuous personal and professional growth. Known for my integrity and accountability, I take ownership of my decisions and mistakes. My excellent communication skills allow me to effectively ask questions and share information.
           I am adaptable, open-minded, and approach challenges with a positive attitude. Demonstrating leadership in high-pressure situations, I am always eager to learn and embrace new opportunities.
         </p>
+        <!-- <button id="addCssButton" onclick="addCss()">Add css</button> -->
       </section>
     </main>
 
@@ -39,6 +40,30 @@
       </blockquote>
     </footer>
   </div>
+  <!-- <script>
+    let counter = 0
+    function addCss() {
+      counter++;
+      const stylesheetLink = document.getElementById("stylesheet");
+      if (counter % 2 !== 0) {
+        // Add the stylesheet link if it doesn't exist
+        if (!stylesheetLink) {
+          const link = document.createElement("link");
+          link.id = "stylesheet";
+          link.href = "styles/styles.css";
+          link.rel = "stylesheet";
+          document.head.appendChild(link);
+          document.getElementById("addCssButton").textContent = "Remove Css"
+        }
+      } else {
+        // Remove the stylesheet link if it exists
+        if (stylesheetLink) {
+          document.head.removeChild(stylesheetLink);
+          document.getElementById("addCssButton").textContent = "Add Css"
+        }
+      }
+    }
+  </script> -->
 </body>
 
 </html>
