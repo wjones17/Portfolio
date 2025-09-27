@@ -66,38 +66,38 @@
 
 body {
   margin: 0;
-  background-color: #f09f34; /* Updated to a more readable hex code */
-  font-family: Arial, Helvetica, sans-serif; /* Apply a consistent font family */
-  padding-top: 5em; /* Prevent content from being hidden behind fixed navbar */
+  background-color: #f09f34; 
+  font-family: Arial, Helvetica, sans-serif; 
+  padding-top: 5em; 
 }
 
 
 h1, h2, h3, main, a {
   text-align: center;
-  margin: 0; /* Remove default margins */
+  margin: 0; 
 }
 
 h1 {
   text-decoration: underline;
-  font-size: 2em; /* Increase font size for prominence */
-  margin-bottom: 20px; /* Space below heading */
+  font-size: 2em; 
+  margin-bottom: 20px; 
 }
 
 h2, h3 {
-  font-size: 1.5em; /* Consistent size for subheadings */
+  font-size: 1.5em; 
   margin-bottom: 15px;
 }
 
 
 p {
   font-size: 1em;
-  line-height: 1.6; /* Improved line height for readability */
-  margin: 0 auto; /* Center text block and remove margin */
-  max-width: 800px; /* Limit width for better readability */
+  line-height: 1.6; 
+  margin: 0 auto; 
+  max-width: 800px; 
 }
 
 a {
-  color: #007bff; /* Consistent link color */
+  color: #007bff; 
   text-decoration: none;
 }
 
