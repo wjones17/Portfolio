@@ -1,24 +1,76 @@
-@charset "UTF-8";
+/* Modern Portfolio Styles */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3em 1em 2em 1em;
+}
+
+#profile-pic {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #5fc4f3;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  margin-bottom: 1.5em;
+}
+
+.name {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+#bio {
+  font-size: 1.2em;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 2em;
+  color: #444;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.links h2 {
+  font-size: 1.3em;
+  margin-bottom: 0.7em;
+}
+
+.social-bar {
+  display: flex;
+  gap: 1.2em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-bar a {
+  background: none;
+  text-decoration: none;
+  transition: 0.2s, color 0.2s;
+  padding: 5px;
+}
+
+.social-bar a:hover {
+  background: none;
+  color: #1470d4;
+  transform: scale(1.15);
+}
 
 body {
   margin: 0;
-  background-color: #5fc4f3; /* Updated to a more readable hex code */
+  background-color: #f09f34; /* Updated to a more readable hex code */
   font-family: Arial, Helvetica, sans-serif; /* Apply a consistent font family */
+  padding-top: 5em; /* Prevent content from being hidden behind fixed navbar */
 }
 
-#wrapper {
-  display: grid;
-  grid-template-rows: 100px auto 50px; /* Added a row for the footer */
-  min-height: 100vh; /* Ensure the wrapper takes at least the full viewport height */
-  overflow: hidden;
-}
-
-footer {
-  text-align: center;
-  background-color: #5fc4f3; /* Consistent with body background */
-  padding: 10px;
-  color: #fff; /* Ensure text is readable */
-}
 
 h1, h2, h3, main, a {
   text-align: center;
@@ -36,12 +88,6 @@ h2, h3 {
   margin-bottom: 15px;
 }
 
-#my_pic {
-  border: 4px solid orange;
-  border-radius: 2em;
-  display: block; /* Center the image */
-  margin: 20px auto; /* Center the image horizontally */
-}
 
 p {
   font-size: 1em;
@@ -60,87 +106,47 @@ a:hover {
 }
 
 #navigation {
-  width: 100vw;
-  position: fixed;
-}
-
-#navigation ul {
   display: flex;
-  width: auto;
-  background-image: repeating-linear-gradient(25deg, Orange 0px, Red 40px, green 40px, Blue 80px);
-  border-radius: 1em;
-  height: 5em;
-  border-bottom: 1px solid #0a2842;
-  justify-content: space-around;
-  font-family: arial, helvetica, sans-serif;
-  margin-top: 0em;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(156, 110, 56, 0.5);
+  backdrop-filter: blur(15px);
+  color: white;
+  text-align: left;
+  padding: 1em 0;
+  box-shadow: 0 0 10px #000000;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
 #navigation a {
   color: white;
   font-size: 2em;
-  display: inline-block;
-  padding: 0.70em;
-  margin: auto;
   text-decoration: none;
   border-radius: 0.15em;
   letter-spacing: 3px;
   font-family: Georgia, serif;
-}
-
-#navigation a:hover {
-  color: #1470d4;
-  background-color: #fff;
-}
-
-#navigation li {
-  width: auto;
-  font-family: arial, helvetica, sans-serif;
-  list-style-type: none;
-  margin-bottom: auto;
+  padding: 0.7em 1em;
+  flex: 1 1 0;
+  text-align: center;
 }
 
 button:hover {
   cursor: pointer;
 }
 
-.cert {
-  color: #000;
-  border: 1px solid #000;
-  background-color: #8de5c5;
-  padding: 0.5em 1em; /* Add padding for better button appearance */
-  text-decoration: none; /* Remove underline from link */
-}
-
-#Work_Experience li {
-  text-align: left;
-  margin-left: 0; /* Remove margin for smaller screens */
-}
-
-#buttons h3:hover,
-#collapseAndExpandButtons button:hover {
-  cursor: pointer;
-}
-
-#buttons h3 {
-  text-decoration: underline;
-}
 
 @media screen and (max-width: 1000px) {
-  #navigation ul {
-    height: auto;
-    flex-direction: column;
-    padding: 0;
+  #navigation {
+    align-items: stretch;
   }
-
   #navigation a {
-    padding: 0.5em;
-    font-size: 1.2em; /* Adjust font size for smaller screens */
-    margin: 0;
+    font-size: 1.2em;
+    padding: 0.5em 0;
   }
-
-  #Work_Experience li {
-    margin-left: 0; /* Remove margin for better alignment on smaller screens */
-  }
-
 }

@@ -4,66 +4,42 @@
 <head id="head">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="William Jones' professional portfolio showcasing skills in programming and web development.">
+  <meta name="description"
+    content="William Jones' professional portfolio showcasing skills in programming and web development.">
   <meta name="author" content="William Jones">
   <title>William Jones - Portfolio</title>
   <link href="styles/styles.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-  <script src="scripts/nav-bar.js"></script>
-  <script src="scripts/app.js" defer></script>
+  <script src="scripts/navbar.js" defer></script>
 </head>
 
 <body>
-  <div id="wrapper">
-    <header>
-      <nav-bar></nav-bar>
-    </header>
+  <header>
+    <nav-bar></nav-bar>
+  </header>
 
-    <main>
-      <h1>William Jones</h1>
-      <section id="bio">
-        <img src="./Images/Professionalpic.jpg" alt="Professional portrait of William Jones" id="profile-pic">
+  <main>
+    <section class="intro">
+      <img src="./Images/Professionalpic.jpg" alt="Professional portrait of William Jones" id="profile-pic">
+      <h1 class="name">William Jones</h1>
+      <p id="bio">
+        I am William Jones, a Computer Science graduate, creative project builder, and software developer. I love blending technical skills with creativity—whether it's coding, welding, electronics, or gaming. Always learning, always building, always positive.
+      </p>
+    </section>
 
-        <h2>Bio</h2>
-        <p>
-          I am proficient in Object-Oriented Programming with advanced skills in Java and foundational knowledge in Python. My technical expertise extends to HTML, CSS, JavaScript, and the Vue framework, gained through my Intro to Web Development class.
-          I am self-motivated and dedicated to continuous personal and professional growth. Known for my integrity and accountability, I take ownership of my decisions and mistakes. My excellent communication skills allow me to effectively ask questions and share information.
-          I am adaptable, open-minded, and approach challenges with a positive attitude. Demonstrating leadership in high-pressure situations, I am always eager to learn and embrace new opportunities.
-        </p>
-        <!-- <button id="addCssButton" onclick="addCss()">Add css</button> -->
-      </section>
-    </main>
+    <section class="links">
+      <h2>Find me online</h2>
+      <div class="social-bar">
+        <a href="https://github.com/wjones17" title="GitHub" target="_blank" rel="noopener noreferrer">
+          <img src="Images/github.svg" alt="GitHub" style="height: 32px; vertical-align: middle;" />
+        </a>
+        <a href="https://youtube.com/@its_willy_t?si=jlkesYMuolPTgbgs" title="Youtube" target="_blank" rel="noopener noreferrer">
+          <img src="Images/youtube.svg" alt="YouTube" style="height: 32px; vertical-align: middle;" />
+        </a>
+        <!-- Add more links as needed -->
+      </div>
+    </section>
+  </main>
 
-    <footer>
-      <blockquote>
-        "The Sun's light takes approximately 8 minutes to reach the Earth. If the Sun were to die, we wouldn't know it for at least 8 minutes. <strong>Don't waste those minutes doing something you don't love.</strong>"
-      </blockquote>
-    </footer>
-  </div>
-  <!-- <script>
-    let counter = 0
-    function addCss() {
-      counter++;
-      const stylesheetLink = document.getElementById("stylesheet");
-      if (counter % 2 !== 0) {
-        // Add the stylesheet link if it doesn't exist
-        if (!stylesheetLink) {
-          const link = document.createElement("link");
-          link.id = "stylesheet";
-          link.href = "styles/styles.css";
-          link.rel = "stylesheet";
-          document.head.appendChild(link);
-          document.getElementById("addCssButton").textContent = "Remove Css"
-        }
-      } else {
-        // Remove the stylesheet link if it exists
-        if (stylesheetLink) {
-          document.head.removeChild(stylesheetLink);
-          document.getElementById("addCssButton").textContent = "Add Css"
-        }
-      }
-    }
-  </script> -->
 </body>
 
 </html>
